@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Share&display=swap");
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*general style for body*/
+body {
+    margin: 0;
+    padding: 0;
+ /* width: 100vw; */
+    height: 100vh;
+    font-family: "Share", cursive;
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/*variable for colors*/
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --bg-color: #e5e5e5;
+    --black-purple: #2e2d31;
+    --dark-purple: #5d44ab;
+    --purple-rouge: #7654b4;
+    --light-purple: #967ecb;
+    --dump-purple: #0e002c;
+    --footer-purple: #654c8c;
+    --grey-color: #d9d9d9;
+}
+
+/*style for wrapper*/
+.wrapper {
+    max-width: 100%;
+    margin: 0rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "hero hero hero hero"
+        "contact contact contact contact"
+        "footer footer footer footer";
+
+}
+
+/*style for header section*/
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "header__black header__black header__planet header__astronaut"
+        "header__black header__black header__gun header__rocket";
+}
+
+/*style for header__black section*/
+.header__black {
+    grid-area: header__black;
+    background-color: var(--black-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+
+}
+
+/*style for heading in header__black section*/
+.header__black h2 {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 6.76rem;
+    color: var(--color-white);
+}
+
+/*style for header__planet section*/
+.header__planet {
+    grid-area: header__planet;
+    background-color: var(--dark-purple);
+    background-image: url("images/planet.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for header__astronaut section*/
+.header__astronaut {
+    grid-area: header__astronaut;
+    background-color: var(--purple-rouge);
+    background-image: url("images/astronaut.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for header__gun section*/
+.header__gun {
+    grid-area: header__gun;
+    background-color: var(--light-purple);
+    background-image: url("images/gun.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for header__rocket section*/
+.header__rocket {
+    grid-area: header__rocket;
+    background-color: var(--dump-purple);
+    background-image: url("images/ship.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for main section*/
+.main {
+    grid-area: main;
+    background-color: var(--dump-purple);
+    background-image: url("images/astronaut.jpg");
+    background-position: right 0%; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100%; 
+    height: 37rem;
+    opacity: 75%;
+}
+
+/*style for hero section*/
+.hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "hero__station hero__space hero__constellation hero__constellation"
+        "hero__black hero__black hero__constellation hero__constellation ";
+
+
+}
+
+/*style for hero__station in hero section*/
+.hero__station {
+    grid-area: hero__station;
+    background-color: var(--purple-rouge);
+    background-image: url("images/station.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for hero__space in hero section*/
+.hero__space {
+    grid-area: hero__space;
+    background-color: var(--dark-purple);
+    background-image: url("images/space.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*style for hero__constellation in hero section*/
+.hero__constellation {
+    grid-area: hero__constellation;
+    background-color: var(--black-purple);
+    background-image: url("images/constellation.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:45rem;
+}
+
+/*style for hero__black in hero section*/
+.hero__black {
+    grid-area: hero__black;
+    background-color: var(--dump-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*style for heading in hero__black of hero section*/
+.hero__black h2 {
+    font-weight: 400;
+    font: size 2.25em;;
+    line-height: 2.6rem;
+    color: var(--color-white);
+}
+
+/*style for  contact section*/
+.contact{
+    padding: 5rem 3rem;
+    grid-area: contact;
+    background-color: #05010B;
+    height: 42rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+       "contact__desc contact__desc contact__form contact__form";
+}
+
+/*style for  contact__desc in contact section*/
+.contact__desc {
+    grid-area: contact__desc;
+
+
+}
+
+/*style of heading in contact__desc of contact section*/
+.contact__desc h2 {
+    margin: 0rem;
+    font-weight: 700;
+    font-size: 8rem;
+    /*line-height: 144.26px; */
+    color: var(--color-white);
+
+}
+
+/*style of paragraph in contact__desc of contact section*/
+.contact__desc p {
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 2rem;
+    /*line-height: 2.25rem; */
+
+}
+
+/*style of form in contact__form of contact section*/
+.contact__form {
+    grid-area: contact__form;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/*style of input in contact__form of contact section*/
+.contact__form input:first-child {
+    height: 6.8rem;
+    background-color: var(--grey-color);
+    border: none;
+}
+
+/*style of textarea in contact__form of contact section*/
+.contact__form textarea {
+    background-color: var(--grey-color);
+    border: none;
+}
+
+/*style of button in contact__form of contact section*/
+.contact__form button {
+    background-color: #967ECB;
+    border: none;
+    padding: 2rem 6rem;
+    align-self: flex-end;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    transition: all 3s;
+}
+
+/*style of buuton hover over in contact__form of contact section*/
+.contact__form button:hover {
+    background-color: #5d44ab;
+    color: var(--bg-color);
+}
+
+.footer{
+    grid-area: footer;
+    height: 40rem;
+    background-color: var(--footer-purple);
+    display: flex;
+    flex-direction: column;
+ }
+
+.footer p{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding:5rem
+}
+.footer nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer nav ul{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height:1.9rem;
+}
+.footer nav ul li{
+    font-weight: 400;
+    font-size:.87rem;
+    line-height: 1.063rem;
+
+}
